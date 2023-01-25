@@ -13,10 +13,8 @@ import Lists from "../components/pages/lists";
 
 const { Header, Sider, Content } = Layout;
 const ApplicationRoutes = () => {
-  const [collapse, setCollapse] = useState(false);
-  useEffect(() => {
-    window.innerWidth <= 760 ? setCollapse(true) : setCollapse(false);
-  }, []);
+  const [collapse, setCollapse] = useState(true);
+  
   const handleToggle = (event: any) => {
     event.preventDefault();
     collapse ? setCollapse(false) : setCollapse(true);
@@ -41,7 +39,7 @@ const ApplicationRoutes = () => {
               }
             )}
           </Header>
-          <Content
+          <div
             style={{
               margin: "24px 16px",
               padding: 24,
@@ -54,7 +52,7 @@ const ApplicationRoutes = () => {
               <Route path="/form" element={<Form />} />
               <Route path="/" element={<Navigate to="/list" />} />
             </Routes>
-          </Content>
+          </div>
         </Layout>
       </Layout>
     </Router>

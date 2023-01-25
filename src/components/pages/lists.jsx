@@ -1,5 +1,5 @@
 import {Form,InputNumber, Popconfirm,Table,Typography,Input,Button,Row, Col,} from "antd";
-import { useEffect, useState } from "react";
+import React,{ useEffect, useState } from "react";
 import {useNavigate} from 'react-router';
 import {useSelector,useDispatch} from "react-redux"
 import { updatePosts ,deletePosts} from '../../redux/features/postsReducer';
@@ -125,6 +125,7 @@ const [form] = Form.useForm();
       dataIndex: "userId",
       editable: true,
       width: "5%",
+      
     },
     {
       key: 2,
@@ -216,26 +217,23 @@ const [form] = Form.useForm();
   }
   return (
     <div>
-<Row gutter={[40, 0]}>
-  <Col span={10}>
+<Row gutter={[40, 20]}>
+  <Col   xs={{ span : 24 }} md={{ span :8}}>
   <Search
         onChange={(e) => setSearchVal(e.target.value)}
         placeholder="Search"
         enterButton
         style={{
-          position: "sticky",
-          top: "0",
-          left: "0",
           width: "300px",
         }}
       />
   </Col>
-          <Col span={8}>
-            <Title level={2}>
+          <Col xs={{ span : 24 , order :3 }} md={{ span :10 ,order :2 }}>
+            <Title level={2} style={{marginTop : "10px" ,textAlign:"center"}}>
             Post List
             </Title>
             </Col>
-          <Col span={6}>
+          <Col xs={{ span : 24 }} md={{ span :6 ,order:3 }}>
           <Button onClick={handleClick} block>Add Post</Button>
           </Col>
         </Row>
