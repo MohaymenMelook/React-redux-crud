@@ -25,10 +25,10 @@ const ApplicationRoutes = () => {
         <Sider trigger={null} collapsible collapsed={collapse}>
           <SideNav />
         </Sider>
-        <Layout>
+        <Layout style={{minWidth :"600px"}}>
           <Header
             className="siteLayoutBackground"
-            style={{ padding: 0, background: "#001529" }}
+            style={{ padding: 0, background: "#001529"  }}
           >
             {React.createElement(
               collapse ? MenuUnfoldOutlined : MenuFoldOutlined,
