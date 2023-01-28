@@ -25,7 +25,7 @@ const ApplicationRoutes = () => {
         <Sider trigger={null} collapsible collapsed={collapse}>
           <SideNav />
         </Sider>
-        <Layout style={{minWidth :"600px"}}>
+        <Layout style={{minWidth :"400px"}}>
           <Header
             className="siteLayoutBackground"
             style={{ padding: 0, background: "#001529"  }}
