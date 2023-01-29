@@ -47,6 +47,7 @@ return (
               {
                 required: true,
                 message: 'Please input number of id',
+}
                 {
             pattern: /[0-9]+$/,
             message: "Please enter only numbers in phone!"
@@ -55,7 +56,7 @@ return (
             whitespace: true,
             message: "Remember to fill phone!"
           }
-              }
+              
             ]}
             >
               <Input placeholder="Please Enter your userID" />
