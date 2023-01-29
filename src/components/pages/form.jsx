@@ -49,7 +49,7 @@ return (
                 message: 'Please input number of id',
                },
                 {
-            pattern: /[0-9]+$/,
+            pattern: '/[0-9]+$/',
             message: "Please enter only numbers in phone!"
           },
           {
