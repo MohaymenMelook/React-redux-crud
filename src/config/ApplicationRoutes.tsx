@@ -21,11 +21,11 @@ const ApplicationRoutes = () => {
   };
   return (
     <Router>
-      <Layout>
+      <Layout style={{minWidth :"700px"}}>
         <Sider trigger={null} collapsible collapsed={collapse}>
           <SideNav />
         </Sider>
-        <Layout style={{minWidth :"400px"}}>
+        <Layout >
           <Header
             className="siteLayoutBackground"
             style={{ padding: 0, background: "#001529"  }}
